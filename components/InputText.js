@@ -12,7 +12,7 @@ const UselessTextInput = (props) => {
 }
 
 const UselessText = () => {
-  const [value, onChangeText] = React.useState('Write Your Message');
+  const [value, onChangeText] = React.useState();
 
   // If you type something in the text box that is a color, the background will change to that
   // color.
@@ -33,6 +33,8 @@ const UselessText = () => {
         numberOfLines={4}
         onChangeText={text => onChangeText(text)}
         value={value}
+        fontSize={20}
+
     
         
       />

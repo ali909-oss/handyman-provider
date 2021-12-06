@@ -58,14 +58,24 @@ const AcceptPro = () => {
 
             <View style={styles.Imageholder}>
             <TouchableOpacity onPress={toggleModal}>
-            <Modal isVisible={isModalVisible}
-                        >
-        <View>
-          <Text style={{color:'white',fontSize:30}}>033141----</Text>
+            <Modal style={styles.modal}
 
-          <Button title="Cancel" onPress={toggleModal} />
-        </View>
-      </Modal>
+                            isVisible={isModalVisible}
+                            animationType={"slide"}
+                            onSwipeComplete={() => setModalVisible(false)}
+                            swipeDirection="left"
+
+                        >
+        
+          <Text style={{color:'black',fontSize:30}}>033141----</Text>
+
+          <View style={styles.btn}>
+                               
+                                <Button  title="Call" onPress={toggleModal} />
+                            </View>
+                        </Modal>
+
+      
             <Text style={{color:'blue',fontSize:18}}>{item.contact}</Text>
             </TouchableOpacity>
             <TouchableOpacity >
@@ -116,6 +126,19 @@ const styles = StyleSheet.create({
         backgroundColor:'white',
         borderRadius:19,
     },
+    modal: {
+        flex:0,
+        justifyContent: 'center',
+        alignItems: 'center',
+        backgroundColor: "#ebf3f9",
+        borderRadius: 10,
+        borderWidth: 1,
+        borderColor: '#fff',
+        marginTop: hp('20%'),
+        marginLeft: wp('10%'),
+        height:hp('35%')
+
+    },
     name:{
         fontSize:20,
         fontWeight:'700',
@@ -149,7 +172,18 @@ const styles = StyleSheet.create({
     rate:{
         fontSize:20,
         color:'black'
-    }
+    },
+    btn:{
+        width: wp('50%'),
+        borderRadius:20,
+        borderWidth:10,
+        borderColor:'#2196f3',
+        marginTop:hp('6%'),
+        overflow:"hidden",
+       
+
+
+      },
    
 
 });

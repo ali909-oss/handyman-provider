@@ -1,6 +1,7 @@
 import React from 'react';
 import { StyleSheet, View, Text,Image, ScrollView, TouchableOpacity, FlatList,SafeAreaView, Button } from 'react-native';
 import { widthPercentageToDP as wp, heightPercentageToDP as hp } from 'react-native-responsive-screen';
+import FontAwesome from 'react-native-vector-icons/dist/FontAwesome';
 const DATA = [
 
     {
@@ -86,7 +87,9 @@ const Completed = () => {
                     <View style={styles.Imageholder}>
                     <Text style={{color:'blue',fontSize:15}}>{item.date}</Text>
         
-                    <Text style={{color:'grey',fontSize:15}}>{item.staus}</Text>
+                    <Text style={{color:'grey',fontSize:15,marginLeft:wp('3%')}}>Rated</Text>
+                    <FontAwesome style={{marginLeft:wp('2%')}} name={"star"} size={20} color="#ffa534" />
+
                     <Text style={{color:'black',fontSize:15}}>{item.rated}</Text>
 
                    </View>
@@ -125,7 +128,7 @@ const styles = StyleSheet.create({
         marginTop: hp('2@'),
         width: wp('90%'),
         padding:SPACING,
-        marginBottom:SPACING,
+        marginBottom:-3,
         backgroundColor:'white',
         borderRadius:19,
         marginLeft:wp('5%')
@@ -133,24 +136,28 @@ const styles = StyleSheet.create({
     name:{
         fontSize:20,
         fontWeight:'700',
-        color:'black'
+        color:'black',
+        padding:5
     },
     Imageholder:{
         flexDirection: 'row',
         justifyContent: 'space-around',
-        padding:10,
+        padding:5,
         width: wp('60%'),
+        marginTop:hp('-1%')
 
         
 
 
     },
     category:{
-     color:'#a8aeb2'
+     color:'#a8aeb2',
+     fontSize:16,
+     padding:5
     },
     image:{
-        height: hp('15%'),
-        width: wp('20%'),
+        height: hp('12%'),
+        width: wp('16%'),
         marginTop: hp('-12%'),
         marginLeft: wp('68%'),
  

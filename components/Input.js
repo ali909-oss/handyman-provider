@@ -12,7 +12,7 @@ const UselessTextInput = (props) => {
 }
 
 const UselessTextInputMultiline = () => {
-  const [value, onChangeText] = React.useState('Add Contact info');
+  const [value, onChangeText] = React.useState();
 
   // If you type something in the text box that is a color, the background will change to that
   // color.
@@ -33,6 +33,7 @@ const UselessTextInputMultiline = () => {
         numberOfLines={1}
         onChangeText={text => onChangeText(text)}
         value={value}
+        fontSize={20}
     
         
       />

@@ -1,4 +1,6 @@
 import React from "react";
+import { heightPercentageToDP, widthPercentageToDP } from 'react-native-responsive-screen';
+
 
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs"
 import { View,Text, Image,StyleSheet, TouchableOpacity,size } from "react-native";
@@ -23,8 +25,22 @@ const TabsProvider = () => {
 
     return (
         <Tab.Navigator
+        screenOptions={{
+          headerShown: false,
+          tabBarStyle: { position: 'absolute',backgroundColor:"#ffffff",padding:5, height:heightPercentageToDP('10%') }
+        }}
             tabBarOptions={{showLabel: false ,
-                
+              style: {
+                height: 60,
+                width: 400,
+                flexDirection: 'column',
+                alignSelf: 'center',
+                elevation: 3,
+                borderTopStartRadius: 5,
+                borderTopEndRadius: 5,
+
+            },
+              
             }}
         >
             
@@ -44,7 +60,7 @@ const TabsProvider = () => {
                 color={focused ? '#7cc' : '#ccc'}
                 
              />
-             <Text style = {{color:focused?"#1a71ff":"##85899f",fontSize:12,marginBottom:5}}>Bookings</Text>
+             <Text style = {{color:focused?"#1a71ff":"##85899f",fontSize:15,marginBottom:5}}>Bookings</Text>
                         </View>
                        
                         
@@ -72,7 +88,7 @@ const TabsProvider = () => {
                  color={focused ? '#7cc' : '#ccc'}
                  
               />
-              <Text style = {{color:focused?"#1a71ff":"##85899f",fontSize:12,marginBottom:5}}>Account</Text>
+              <Text style = {{color:focused?"#1a71ff":"##85899f",fontSize:15,marginBottom:5}}>Account</Text>
                          </View>
                         
                          
@@ -96,7 +112,7 @@ const TabsProvider = () => {
                  color={focused ? '#7cc' : '#ccc'}
                  
               />
-              <Text style = {{color:focused?"#1a71ff":"##85899f",fontSize:12,marginBottom:5}}>Chat</Text>
+              <Text style = {{color:focused?"#1a71ff":"##85899f",fontSize:15,marginBottom:5}}>Chat</Text>
                          </View>
                         
                          

@@ -116,10 +116,10 @@ const styles = StyleSheet.create({
         height: hp('25%'),
         width: wp('120%'),
         marginTop: hp('1%'),
-        marginLeft: wp('-2%'),
+        marginLeft: wp('-15%'),
          
     },
-    img:{ height: hp('20%'),
+    img:{ height: hp('18%'),
     width: wp('25%'),
     marginTop: hp('-20'),
    marginLeft:wp('40%')

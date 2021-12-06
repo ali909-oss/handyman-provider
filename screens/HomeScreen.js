@@ -43,12 +43,12 @@ const DATA = [
     
     {
         id:'8',
-        name: 'Hair & Beauty',
+        name: 'Beauty',
         image: require("../assets/icons/Vector1.png"),
  },
     {
         id:'9',
-        name: 'Home Sanitize',
+        name: 'Sanitize',
         image: require("../assets/icons/Vector9.png"),
 },
     
@@ -97,7 +97,7 @@ const HomeScreen = ({navigation}) => {
 
 
 
-            <View style={{ marginTop: hp("10%") ,height:hp('50%') }}>
+            <View style={{ marginTop: hp("10%") ,height:hp('52%') }}>
                 <FlatList
                     data={DATA}
                     numColumns={3}
@@ -105,7 +105,7 @@ const HomeScreen = ({navigation}) => {
                     renderItem={({ item }) => {
                         
                         return (
-                                   <View style={{flex:1}}>
+                                   <View style={{flex:1,marginTop:hp('-2%')}}>
                                     <View style={styles.Imageholder}>
                                     <TouchableOpacity onPress={()=> navigation.navigate("HomeClean")}>
                                     <Image source={item.image} style={styles.image1} />

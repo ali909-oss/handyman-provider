@@ -29,10 +29,11 @@ const Phonenum = () => {
       }}>
           <Text style={{fontSize:20,color:'black',fontWeight:'500'}}>Phone Number</Text>
       <Sign
-        multiline
         numberOfLines={1}
         onChangeText={text => onChangeText(text)}
         value={value}
+        fontSize={18}
+
     
         
       />

@@ -93,7 +93,7 @@ const ServicesPro = ({navigation}) => {
 
 
 
-            <View style={{ marginTop: hp("10%") ,height:hp('60%') }}>
+            <View style={{ marginTop: hp("10%") ,height:hp('58%') }}>
                 <FlatList
                     data={DATA}
                     numColumns={3}

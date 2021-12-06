@@ -61,14 +61,14 @@ const DATA = [
   },
 ]
 
-const SPACING=5;
+const SPACING=10;
 
 const UpcomingPro = ({navigation}) => {
  
 
   return (
-    
-<FlatList
+    <View style={{height:hp('70%')}}>
+        <FlatList
             
             data={DATA}
             keyExtractor={item => item.id}
@@ -107,6 +107,8 @@ const UpcomingPro = ({navigation}) => {
 
         
           />
+          </View>
+
         
   )
   }
@@ -122,7 +124,8 @@ const styles = StyleSheet.create({
         marginTop: hp('2%'),
         width: wp('90%'),
         padding:SPACING,
-        marginBottom:SPACING,
+        marginBottom: -2,
+
         backgroundColor:'white',
         borderRadius:19,
         marginLeft:wp('5%')
@@ -143,7 +146,9 @@ const styles = StyleSheet.create({
 
     },
     category:{
-     color:'#a8aeb2'
+     color:'#a8aeb2',
+     padding:5,
+     fontSize:16
     },
     image:{
         height: hp('8%'),

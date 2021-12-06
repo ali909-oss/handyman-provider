@@ -10,7 +10,7 @@ import AntDesign from 'react-native-vector-icons/dist/AntDesign';
 
 
 
-const Support = ({ navigation }) => {
+const SupportPro = ({ navigation }) => {
     const [isModalVisible, setModalVisible] = useState(false);
     const [ModalVisible, setVisible] = useState(false);
 
@@ -22,14 +22,14 @@ const Support = ({ navigation }) => {
   const toggle = () => {
     setVisible(!ModalVisible);
   };
-
+  
     return (
         <View style={styles.container}>
 
             <View style={styles.header}>
             <View style={{marginTop: hp('6%'), marginLeft: wp('-4%') }}>
             <AntDesign
-                     onPress={()=> navigation.navigate("HomeScreen")}   style={{marginTop: hp('-3%'), marginLeft: wp('-44%') }} name={"arrowleft"} size={35} color="black" />
+                     onPress={()=> navigation.navigate("BookingScreen")}   style={{marginTop: hp('-3%'), marginLeft: wp('-44%') }} name={"arrowleft"} size={35} color="black" />
                  </View>
 
 
@@ -50,29 +50,41 @@ const Support = ({ navigation }) => {
                     <View style={styles.btn}>
 
                         <Button title="Contact Us" onPress={toggle} />
-                        <Modal isVisible={ModalVisible}
-                        >
-          <Text style={{color:'white',fontSize:30}}>033141----</Text>
+                        <Modal style={styles.modal}
 
+                            isVisible={ModalVisible}
+                            animationType={"slide"}
+                            onSwipeComplete={() => setVisible(false)}
+                            swipeDirection="left"
+
+                        >
+          <Text style={{color:'black',fontSize:30}}>033141----</Text>
+          <View style={styles.btnn}>
           <Button title="Cancel" onPress={toggle} />
+          </View>
       </Modal>
                     </View>
                     <View style={styles.btn}>
 
                         <Button title="Mail Us" onPress={toggleModal}/>
-                        <Modal isVisible={isModalVisible}
-                        >
-        <View>
-          <Text style={{color:'white',fontSize:30}}>abc@gmail.com</Text>
+                        <Modal style={styles.modal}
 
+                            isVisible={isModalVisible}
+                            animationType={"slide"}
+                            onSwipeComplete={() => setModalVisible(false)}
+                            swipeDirection="left"
+
+                        >
+          <Text style={{color:'black',fontSize:30}}>abc@gmail.com</Text>
+          <View style={styles.btnn}>
           <Button title="Cancel" onPress={toggleModal} />
-        </View>
+          </View>
       </Modal>
                     </View>
                 </View>
                 <View style={{marginLeft:widthPercentageToDP('5%'),marginTop:hp('2%')}}>
                <Text style={{color:'blue',fontWeight:'700',fontSize:25}}>Write Us</Text>
-               <Text>Let us know the Problem</Text>
+               <Text style={{padding:5}}>Let us know the Problem</Text>
                </View>
 <View style={{marginTop:hp('1%')}}>
 <UselessTextInputMultiline/> 
@@ -83,7 +95,7 @@ const Support = ({ navigation }) => {
 </View>
 <View style={styles.btn1}>
     
-    <Button title="Submit" onPress={()=> navigation.navigate("HomeScreen")}  style={{justifyContent:'center',alignItems:'center'}}/>
+    <Button title="Submit" onPress={()=> navigation.navigate("BookingScreen")}  style={{justifyContent:'center',alignItems:'center'}}/>
     </View>
 
  
@@ -105,7 +117,7 @@ const Support = ({ navigation }) => {
     )
 }
 
-export default Support;
+export default SupportPro;
 
 const styles = StyleSheet.create({
     name: {
@@ -120,20 +132,31 @@ const styles = StyleSheet.create({
 
     },
     texta:{
-        fontSize:25,
-        fontWeight:'500',
+        fontSize:30,
+        fontWeight:'700',
         color:'blue',
-        marginTop: hp('-40%'),
-           marginRight: wp('50%'),
+        marginTop: hp('-45%'),
            
        
            
        },
+       modal: {
+        flex:0,
+        justifyContent: 'center',
+        alignItems: 'center',
+        backgroundColor: "#ebf3f9",
+        borderRadius: 10,
+        borderWidth: 1,
+        borderColor: '#fff',
+        marginTop: hp('20%'),
+        marginLeft: wp('10%'),
+        height:hp('35%')
+
+    },
        textb:{
         fontSize:15,
         color:'#505050',
-        marginTop: hp('-35%'),
-        marginRight: wp('50%'),
+        marginTop: hp('-38%'),
 
        
 
@@ -149,6 +172,17 @@ const styles = StyleSheet.create({
 
      
     },
+    btnn:{
+        width: wp('50%'),
+        borderRadius:20,
+        borderWidth:10,
+        borderColor:'#2196f3',
+        marginTop:hp('6%'),
+        overflow:"hidden",
+       
+
+
+      },
 
     header: {
         flex: 1,
@@ -181,6 +215,7 @@ const styles = StyleSheet.create({
 
 
     },
+    
     btn1: {
         width: wp('50%'),
         borderRadius: 20,

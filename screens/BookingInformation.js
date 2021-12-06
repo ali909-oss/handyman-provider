@@ -9,13 +9,15 @@ import Bookinginfo from '../components/Bookinginfo';
 import Bookingstatus from '../components/Bookingstatus';
 import Bottomsheet from '../components/Bottomsheet';
 
-
+const Data =[{
+    Id:'Booking ID 2541'
+}]
 
 const BookingInformation = ({navigation}) => {
     return (
         <View style={styles.container}>
             
-            <Text style={styles.htext}>Booking ID 2541</Text>
+            <Text style={styles.htext}>{Data && Data[0].Id}</Text>
             <View style={styles.bookinfo}>
                 <Bookinginfo/>
             </View>
@@ -24,10 +26,7 @@ const BookingInformation = ({navigation}) => {
            <Bookingstatus/>
            </View>
            
-           <View style={styles.btn}>
-    
-    <Button title="Amount to Pay      $15/hr"  onPress={()=> navigation.navigate("PaymentDone")} />
-    </View>           
+                   
 
 
         </View>
@@ -47,8 +46,9 @@ const styles = StyleSheet.create({
     },
     htext:{
       fontSize:20,
-      fontWeight:'400',
-      textAlign:'center'
+      fontWeight:'700',
+      textAlign:'center',
+      color:'black'
 
     },
     bookinfo:{

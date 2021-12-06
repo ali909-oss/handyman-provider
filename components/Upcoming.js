@@ -122,7 +122,7 @@ const styles = StyleSheet.create({
         marginTop: hp('2%'),
         width: wp('90%'),
         padding:SPACING,
-        marginBottom:SPACING,
+        marginBottom:-3,
         backgroundColor:'white',
         borderRadius:19,
         marginLeft:wp('5%')
@@ -130,23 +130,28 @@ const styles = StyleSheet.create({
     name:{
         fontSize:20,
         fontWeight:'700',
-        color:'black'
+        color:'black',
+        padding:5
     },
     Imageholder:{
         flexDirection: 'row',
         justifyContent: 'space-around',
-        padding:10,
+        padding:5,
         width: wp('60%'),
+
 
         
 
 
     },
     category:{
-     color:'#a8aeb2'
+     color:'#a8aeb2',
+     padding:5,
+     fontSize:16
+
     },
     image:{
-        height: hp('15%'),
+        height: hp('13%'),
        width: wp('20%'),
        marginTop: hp('-12%'),
        marginLeft: wp('60%'),

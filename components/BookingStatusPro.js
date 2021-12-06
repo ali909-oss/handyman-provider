@@ -4,6 +4,7 @@ import { widthPercentageToDP as wp, heightPercentageToDP as hp } from 'react-nat
 import Bottomsheet from '../components/Bottomsheet';
 import BottomSheet from 'reanimated-bottom-sheet';
 import Feather from 'react-native-vector-icons/dist/Feather';
+import Entypo from 'react-native-vector-icons/dist/Entypo';
 import { set } from 'react-native-reanimated';
 const DATA = [
 
@@ -24,7 +25,8 @@ const DATA = [
         title: "Booking Confirmed",
         id: "3",
         description:"Usually Confirms in 24 hrs",
-        image: require("../assets/icons/Vect1.png")
+        image: require("../assets/icons/Vect1.png"),
+        confirm:'Confirmed on 21 July,11:24pm'
 
 
         
@@ -36,7 +38,8 @@ const DATA = [
         title: "Started a Job",
         id: "4",
         description:"Schedule on 21 Jun, 10:00 am",
-        image: require("../assets/icons/Vect2.png")
+        image: require("../assets/icons/Vect2.png"),
+        start:'Started since 11:23pm'
 
 
         
@@ -73,7 +76,7 @@ const BookingStatusPro = () => {
 
   return (
       <View style={styles.container}>
-      <View style={{height:hp('60%'),marginTop:hp('1%')}}>
+      <View style={{height:hp('60%'),marginTop:hp('-2%')}}>
            
           {no == 0 ? <TouchableOpacity onPress={() => {sheetRef.current.snapTo(0)
            
@@ -88,8 +91,11 @@ const BookingStatusPro = () => {
             size={20}
             style={{marginLeft:wp('3%'),color:'grey'}}
             /> {DATA && DATA[0].title}  </Text>
+            
             <Text style={styles.category}>{DATA && DATA[0].description}</Text>
-  
+            <View style={{marginTop:hp('-3%')}}>
+            
+            </View>
             <Image source={DATA && DATA[0].image} style={styles.image} />
 
             
@@ -144,7 +150,7 @@ const BookingStatusPro = () => {
            size={20}
            style={{marginLeft:wp('3%'),color:'green'}}
            /> {DATA && DATA[1].title}  </Text>
-           <Text style={styles.category}>{DATA && DATA[1].description}</Text>
+           <Text style={styles.category}>{DATA && DATA[1].confirm}</Text>
  
            <Image source={DATA && DATA[1].image} style={styles.image} />
 
@@ -185,7 +191,7 @@ const BookingStatusPro = () => {
           size={20}
           style={{marginLeft:wp('3%'),color:'green'}}
           /> {DATA && DATA[2].title}  </Text></View>}
-           <Text style={styles.category}>{DATA && DATA[2].description}</Text>
+           <Text style={styles.category}>{DATA && DATA[2].start}</Text>
  
            <Image source={DATA && DATA[2].image} style={styles.image} />
 

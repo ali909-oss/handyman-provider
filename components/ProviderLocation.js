@@ -30,9 +30,11 @@ const LocationSer = () => {
           <Text style={{fontSize:20,fontWeight:'500',color:'black',marginTop:heightPercentageToDP('2%')}}>Service Location</Text>
       <Sign
         multiline
-        numberOfLines={1}
+        numberOfLines={2}
         onChangeText={text => onChangeText(text)}
         value={value}
+        fontSize={18}
+
     
         
       />

@@ -1,7 +1,7 @@
 import React from "react";
 import { createStackNavigator } from '@react-navigation/stack';
 
-import ChatScreen from "./ChatScreen";
+import ChatScreenPro from "./ChatScreenPro";
 
 const Stack = createStackNavigator();
 
@@ -10,7 +10,7 @@ function NStack() {
     <Stack.Navigator>
        <Stack.Screen 
       name="ChatScreen" 
-      component={ChatScreen} 
+      component={ChatScreenPro} 
       options={{ headerShown: false }} 
       />
       

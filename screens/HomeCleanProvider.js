@@ -13,7 +13,7 @@ const DATA = [
 
         name: "Ali",
         id: "1",
-        category:'Cleaner',
+        category:'Home Clean',
         jobs:'Jobs',
         price:'Price',
         rating:'Rating',
@@ -30,7 +30,7 @@ const DATA = [
 
         name: "Hamza",
         id: "2",
-        category:'Cleaner',
+        category:'Home Clean',
         jobs:'Jobs',
         price:'Price',
         rating:'Rating',
@@ -46,7 +46,7 @@ const DATA = [
 
         name: "fadii",
         id: "3",
-        category:'Cleaner',
+        category:'Bath Clean',
         jobs:'Jobs',
         price:'Price',
         rating:'Rating',
@@ -63,7 +63,7 @@ const DATA = [
 
         name: "Hassan",
         id: "4",
-        category:'Cleaner',
+        category:'Bath Clean',
         jobs:'Jobs',
         price:'Price',
         rating:'Rating',
@@ -120,7 +120,7 @@ const DATA = [
 
 
               <View style={styles.footer}>
-                  <View style={{height:hp('100%')}}>
+                  <View style={{height:hp('75%')}}>
             <FlatList
             
               data={DATA}
@@ -133,11 +133,11 @@ const DATA = [
                       <Text style={styles.name}>{item.name}</Text>
                       <Text style={styles.category}>{item.category}</Text>
                       <View style={styles.Imageholder}>
-                      <Text style={{color:'#cccccc',fontSize:18}}>{item.jobs}</Text>
-                      <Text style={{color:'#cccccc',fontSize:18}}>{item.price}</Text>
-                      <Text style={{color:'#cccccc',fontSize:18}}>{item.rating}</Text>
+                      <Text style={{color:'#cccccc',fontSize:18}}>Jobs</Text>
+                      <Text style={{color:'#cccccc',fontSize:18}}>Price</Text>
+                      <Text style={{color:'#cccccc',fontSize:18}}>Rating</Text>
                       </View>
-                      <View style={styles.Imageholder}>
+                      <View style={styles.Imageholder1}>
                       <Text style={{color:'black'}}>{item.tjobs}</Text>
                       <Text style={{color:'black'}}>{item.tprice}</Text>
                       
@@ -148,9 +148,11 @@ const DATA = [
                       
 
                   <Image source={item.image} style={styles.image} />
+                  <View>
 
-                  <FontAwesome style={{marginTop:hp('-6%'),marginLeft:wp('40%')}}
+                  <FontAwesome style={{marginTop:hp('-1%'),marginLeft:wp('40%')}}
          name={"star"} size={20} color="#ffa534" />
+         </View>
                       
                   </View>
                   </TouchableOpacity>
@@ -187,7 +189,7 @@ const styles = StyleSheet.create({
     },
     footer:{
         flex: 4,
-        backgroundColor: '#ebf3f9',
+        backgroundColor: '#f8f9fd',
         borderTopLeftRadius:30,
         borderTopRightRadius:30,
         marginTop: hp('-10'),
@@ -208,8 +210,8 @@ const styles = StyleSheet.create({
         height: hp('20%'),
         marginTop: hp('3'),
         width: wp('90%'),
-        padding:SPACING,
-        marginBottom:SPACING,
+        padding:15,
+        marginBottom:-4,
         backgroundColor:'white',
         borderRadius:19
     },
@@ -223,16 +225,31 @@ const styles = StyleSheet.create({
         justifyContent: 'space-around',
         padding:10,
         width: wp('60%'),
+        marginTop:hp('-1%')
+
+        
+
+
+    },
+    Imageholder1:{
+        flexDirection: 'row',
+        justifyContent: 'space-around',
+        padding:10,
+        width: wp('60%'),
+        marginTop:hp('-1%')
+
 
         
 
 
     },
     category:{
-     color:'#a8aeb2'
+     color:'#a8aeb2',
+     fontSize:17,
+     padding:5
     },
     image:{
-        height: hp('20%'),
+        height: hp('15%'),
        width: wp('20%'),
        marginTop: hp('-18'),
        marginLeft: wp('60'),

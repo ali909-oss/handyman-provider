@@ -6,7 +6,7 @@ const Sign = (props) => {
   return (
     <TextInput
       {...props} // Inherit any props passed to it; e.g., multiline, numberOfLines below
-      maxLength={40}
+      maxLength={100}
     />
   );
 }
@@ -30,9 +30,11 @@ const Aboutyou = () => {
           <Text style={{fontSize:20,color:'black',fontWeight:'500',marginTop:heightPercentageToDP('2%')}}>About You</Text>
       <Sign
         multiline
-        numberOfLines={1}
+        numberOfLines={3}
         onChangeText={text => onChangeText(text)}
         value={value}
+        fontSize={18}
+
     
         
       />

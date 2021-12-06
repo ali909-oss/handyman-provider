@@ -25,11 +25,11 @@ const DATA = [
 
 ]
 
-const SPACING=5;
+const SPACING=10;
 
 const Providerprofile = ({navigation}) => {
     return (
-        <View style={{height:hp('45%'),marginTop:hp('-12%'),marginLeft:wp('5%')}}>
+        <View style={{height:hp('50%'),marginTop:hp('-12%'),marginLeft:wp('5%')}}>
       <FlatList
       
         data={DATA}
@@ -44,11 +44,11 @@ const Providerprofile = ({navigation}) => {
 
 
                 <View style={styles.Imageholder}>
-                <Text style={{color:'#cccccc',fontSize:18}}>{item.jobs}</Text>
-                <Text style={{color:'#cccccc',fontSize:18}}>{item.price}</Text>
-                <Text style={{color:'#cccccc',fontSize:18}}>{item.rating}</Text>
+                <Text style={{color:'#cccccc',fontSize:18}}>Jobs</Text>
+                <Text style={{color:'#cccccc',fontSize:18}}>Price</Text>
+                <Text style={{color:'#cccccc',fontSize:18}}>Rating</Text>
                 </View>
-                <View style={styles.Imageholder}>
+                <View style={styles.Imageholder1}>
                 <Text style={{color:'black'}}>{item.tjobs}</Text>
                 <Text style={{color:'black'}}>{item.tprice}</Text>
                 
@@ -56,7 +56,7 @@ const Providerprofile = ({navigation}) => {
 
                 
                 </View>
-                <FontAwesome style={{marginTop:hp('-4%'),marginLeft:wp('53%')}}
+                <FontAwesome style={{marginTop:hp('-4%'),marginLeft:wp('54%')}}
          name={"star"} size={20} color="#ffa534" /> 
                 </View>
         )
@@ -102,7 +102,7 @@ const styles = StyleSheet.create({
         padding:SPACING,
         backgroundColor:'white',
         borderRadius:19,
-        marginTop:hp('15%')
+        marginTop:hp('20%')
     },
     btn:{
         width: wp('60%'),
@@ -140,6 +140,21 @@ const styles = StyleSheet.create({
         padding:10,
         width: wp('60%'),
         marginLeft: wp('8%'),
+        marginTop:hp('-2%')
+
+       
+
+        
+
+
+    },
+    Imageholder1:{
+        flexDirection: 'row',
+        justifyContent: 'space-between',
+        padding:10,
+        width: wp('60%'),
+        marginLeft: wp('8%'),
+        marginTop:hp('-1%')
 
        
 
@@ -154,7 +169,9 @@ const styles = StyleSheet.create({
 
     },
     category:{
-     color:'#a8aeb2'
+     color:'#a8aeb2',
+     fontSize:15,
+     padding:5
     },
     des:{
         color:'#a8aeb2',

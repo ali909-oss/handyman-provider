@@ -142,9 +142,7 @@ const HomeClean = ({navigation}) => {
                            
                            
                             <Text style={styles.charges} >{item.price}</Text>
-                            <TouchableOpacity onPress={()=> navigation.navigate("HomeCleanProvider")}>
                             <Image source={item.image2} style={styles.image2} />
-                            </TouchableOpacity>
                            
                              
 
@@ -179,11 +177,11 @@ const styles = StyleSheet.create({
 
     },
     main:{
-        height: hp('15%'),
+        height: hp('13%'),
         marginTop: hp('3'),
         width: wp('90%'),
         padding:SPACING,
-        marginBottom:SPACING,
+        marginBottom:-4,
         backgroundColor:'white',
         borderRadius:19,
         marginLeft:wp('5%')
@@ -197,7 +195,7 @@ const styles = StyleSheet.create({
     },
     footer: {
         flex: 4,
-        backgroundColor: '#fff',
+        backgroundColor: '#f8f9fd',
         borderTopLeftRadius:30,
         borderTopRightRadius:30,
         marginTop: hp('-5'),
@@ -226,7 +224,7 @@ const styles = StyleSheet.create({
        
     },
     texta:{
-     fontSize:25,
+     fontSize:23,
      fontWeight:'500',
      color:'black',
      marginTop: hp('-16%'),

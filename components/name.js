@@ -29,10 +29,10 @@ const NameY = () => {
       }}>
           <Text style={{fontSize:20,color:'black',fontWeight:'500'}}>Full Name</Text>
       <Sign
-        multiline
         numberOfLines={1}
         onChangeText={text => onChangeText(text)}
         value={value}
+        fontSize={18}
     
         
       />

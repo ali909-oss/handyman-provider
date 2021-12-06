@@ -51,7 +51,7 @@ const data = [
     }
 ]
 
-const SPACING = 5;
+const SPACING = 10;
 
 const NewBooking = () => {
     const navigation = useNavigation();
@@ -76,7 +76,7 @@ const NewBooking = () => {
                             <Text style={{ color: 'blue', fontSize: 15 }}>{item.date}</Text>
 
 
-                            <Text style={{ color: 'grey', fontSize: 15, marginLeft: wp('2%') }}>{item.staus}</Text>
+                            <Text style={{ color: 'grey', fontSize: 15, marginLeft: wp('5%') }}>{item.staus}</Text>
                         </View>
                         <Image source={item.image} style={styles.image} />
 
@@ -114,7 +114,7 @@ const styles = StyleSheet.create({
         marginTop: hp('2%'),
         width: wp('90%'),
         padding: SPACING,
-        marginBottom: SPACING,
+        marginBottom: -2,
         backgroundColor: 'white',
         borderRadius: 19,
         marginLeft: wp('5%')
@@ -129,19 +129,22 @@ const styles = StyleSheet.create({
         justifyContent: 'space-around',
         padding: 10,
         width: wp('60%'),
+        marginTop:hp('-1%')
 
 
 
 
     },
     category: {
-        color: '#a8aeb2'
+        color: '#a8aeb2',
+        padding:5,
+        fontSize:16
     },
     image: {
         height: hp('8%'),
         width: wp('16%'),
-        marginTop: hp('-8%'),
-        marginLeft: wp('62%')
+        marginTop: hp('-12%'),
+        marginLeft: wp('65%')
 
 
 

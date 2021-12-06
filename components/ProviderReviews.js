@@ -2,7 +2,7 @@ import React from 'react';
 import { StyleSheet, View, Text, Button,FlatList,SafeAreaView, ScrollView, TouchableOpacity, Image, TextInput } from 'react-native';
 import { widthPercentageToDP as wp, heightPercentageToDP as hp } from 'react-native-responsive-screen';
 import EvilIcons from 'react-native-vector-icons/dist/EvilIcons';
-
+import FontAwesome from 'react-native-vector-icons/dist/FontAwesome';
 
 const DATA = [
 
@@ -12,7 +12,7 @@ const DATA = [
         id:'2',
         user_name:'Ali',
         date:'20 Dec 2012',
-        review:'Best Service',
+        review:'Best SLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.ervice',
 
 
 
@@ -22,7 +22,7 @@ const DATA = [
         id:'3',
         user_name:'Taha',
         date:'11 Jan 2012',
-        review:'Well Worked',
+        review:'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
 
     },
     {
@@ -30,7 +30,7 @@ const DATA = [
         id:'4',
         user_name:'Ali',
         date:'22 Jul 2012',
-        review:'Impressive Work',
+        review:'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
 
 
     },
@@ -39,7 +39,7 @@ const DATA = [
         id:'5',
         user_name:'Ali',
         date:'22 Jul 2012',
-        review:'Impressive Work',
+        review:'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
 
 
     },
@@ -48,7 +48,7 @@ const DATA = [
         id:'6',
         user_name:'Ali',
         date:'22 Jul 2012',
-        review:'Impressive Work',
+        review:'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
 
 
     },
@@ -63,31 +63,45 @@ const DATA = [
 const ProviderReviews = () => {
     return (
         
-      <View style={{height:hp('58%'),marginTop:hp('-2%'),marginLeft:wp('5%')}}>
-      <FlatList
-      
-        data={DATA}
-        keyExtractor={item => item.id}
-        renderItem={({item}) =>(
-            <View style={styles.main}>
-
-
-                <Image source={item.user_profile} style={styles.userimg} />
-                <Text style={styles.username}>{item.user_name}</Text>
-                <Text style={styles.date}>{item.date}</Text>
-                <Text style={styles.userdes}>{item.review}</Text>
-
-
-
-
-                </View>
-
-)
-      
-      
-}
-/>
-</View>
+        <View style={{height:hp('80%'),marginTop:hp('2%'),marginLeft:wp('3%')}}>
+        <Text style={{fontSize:20,color:'black'}}>Recent Reviews</Text>
+        <View style={{marginLeft:wp('2%')}}>
+        <FlatList
+        
+          data={DATA}
+          keyExtractor={item => item.id}
+          renderItem={({item}) =>(
+              <View style={styles.main}>
+  
+                  
+                  <Image source={item.user_profile} style={styles.userimg} />
+                  <Text style={styles.username}>{item.user_name}</Text>
+                  <Text style={styles.date}>{item.date}</Text>
+                  <View style={{flexDirection:'row',marginLeft:wp('60%'),marginTop:hp('-5%')}}>
+                  <FontAwesome  name={"star"} size={20} color="#ffa534" />
+                  <FontAwesome  name={"star"} size={20} color="#ffa534" />
+                  <FontAwesome  name={"star"} size={20} color="#ffa534" />
+                  <FontAwesome  name={"star"} size={20} color="#ffa534" />
+                  <FontAwesome  name={"star"} size={20} color="#ffa534" />
+                  </View>
+  
+  
+  
+  
+                  <Text style={styles.userdes}>{item.review}</Text>
+  
+  
+  
+  
+                  </View>
+  
+  )
+        
+        
+  }
+  />
+  </View>
+  </View>
     )}
 
     export default ProviderReviews;
@@ -113,11 +127,13 @@ const ProviderReviews = () => {
     
         },
         main:{
-            height: hp('22%'),
+            height: hp('25%'),
             marginTop: hp('3%'),
             width: wp('90%'),
-            backgroundColor:'white',
-            borderRadius:19
+            backgroundColor:'#ffffff',
+            borderRadius:19,
+            
+          
         },
        
     
@@ -143,6 +159,7 @@ const ProviderReviews = () => {
             marginTop: hp('-20'),
     
         },
+       
         category:{
          color:'#a8aeb2'
         },
@@ -184,7 +201,8 @@ const ProviderReviews = () => {
             color:'#a8aeb2',
             marginLeft:wp('25%'),
             fontSize:15,
-            padding:15
+            padding:25,
+            marginLeft:wp('-4%')
 
     
     

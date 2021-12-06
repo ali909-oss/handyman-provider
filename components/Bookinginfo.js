@@ -118,7 +118,7 @@ const styles = StyleSheet.create({
     Imageholder:{
         flexDirection: 'row',
         justifyContent: 'space-around',
-        padding:10,
+        padding:5,
         width: wp('60%'),
 
         
@@ -126,12 +126,14 @@ const styles = StyleSheet.create({
 
     },
     category:{
-     color:'#a8aeb2'
+     color:'#a8aeb2',
+     fontSize:18,
+     padding:5
     },
     image:{
-        height: hp('20%'),
-       width: wp('20%'),
-       marginTop: hp('-15%'),
+        height: hp('12%'),
+       width: wp('16%'),
+       marginTop: hp('-13%'),
        marginLeft: wp('60%'),
 
 

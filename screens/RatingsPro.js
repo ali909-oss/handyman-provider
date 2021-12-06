@@ -158,7 +158,9 @@ const RatingsPro = ({navigation}) => {
             marginTop: hp('3%'),
             width: wp('90%'),
             backgroundColor:'#ffffff',
-            borderRadius:19
+            borderRadius:19,
+            marginLeft:wp('-3%')
+          
         },
         img1:{
             height: hp('20%'),

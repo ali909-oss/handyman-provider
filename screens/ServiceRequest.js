@@ -1,10 +1,81 @@
-import React from 'react';
+import React ,{useState} from 'react';
 import { StyleSheet, View, Text, Button,FlatList, ScrollView, TouchableOpacity, Image, TextInput } from 'react-native';
 import { widthPercentageToDP as wp, heightPercentageToDP as hp } from 'react-native-responsive-screen';
-
-
+import FontAwesome from 'react-native-vector-icons/dist/FontAwesome';
+import BottomSheet from 'reanimated-bottom-sheet';
+import Animated from 'react-native-reanimated';
+import ImagePicker from 'react-native-image-crop-picker';
 
 const SeriveRequest = ({navigation}) => {
+    const [image, setImage] = useState('https://api.adorable.io/avatars/80/abott@adorable.png');
+    const sheetRef = React.useRef(null);
+
+    const takePhotoFromCamera = () => {
+        ImagePicker.openCamera({
+          compressImageMaxWidth: 300,
+          multiple:true,
+          compressImageMaxHeight: 300,
+          cropping: true,
+          compressImageQuality: 0.7
+        }).then(image => {
+          console.log(image);
+          setImage(image.path);
+          sheetRef.current.snapTo(1);
+        });
+      }
+    
+      const choosePhotoFromLibrary = () => {
+        ImagePicker.openPicker({
+          width: 300,
+          height: 300,
+          multiple:true,
+
+          cropping: true,
+          compressImageQuality: 0.7
+        }).then(image => {
+          console.log(image);
+          setImage(image.path);
+          sheetRef.current.snapTo(1);
+        });
+      }
+
+    
+    const renderInner = () => (
+        <View style={styles.panel}>
+        <View style={{alignItems: 'center'}}>
+          <Text style={styles.panelTitle}>Upload Photo</Text>
+        </View>
+        <TouchableOpacity style={styles.panelButton} onPress={takePhotoFromCamera} >
+          <Text style={styles.panelButtonTitle}>Take Photo</Text>
+        </TouchableOpacity>
+        <TouchableOpacity style={styles.panelButton} onPress={choosePhotoFromLibrary}>
+          <Text style={styles.panelButtonTitle}>Choose From Library</Text>
+        </TouchableOpacity>
+        <TouchableOpacity
+          style={styles.panelButton}
+          onPress={() =>  {sheetRef.current.snapTo(1)
+           
+          }}>
+          <Text style={styles.panelButtonTitle}>Cancel</Text>
+        </TouchableOpacity>
+      </View>
+        
+
+    );
+
+    const renderHeader = () => (
+        <View style={styles.Header}>
+            <View style={styles.panelheader}>
+                <View style={styles.panelhandle}>
+
+                </View>
+            </View>
+        </View>
+        
+    );                                       
+
+    bs= React.createRef();
+    fall= new Animated.Value(1);
     return (
         <View style={styles.container}>
              
@@ -43,8 +114,33 @@ const SeriveRequest = ({navigation}) => {
             style={styles.input}
             placeholder="Share Your Experience (Optional)"
             placeholderTextColor="#b3b3b3"
+            multiline={true}
+
             />
                 </View>
+                <View style={{marginLeft:wp('-70%'),marginTop:hp('3%')}}>
+                    <TouchableOpacity onPress={() => {sheetRef.current.snapTo(0)
+           
+        }}>
+                <FontAwesome 
+                name="image"
+                size={70}
+                />
+                </TouchableOpacity>
+                <Text style={{fontSize:16}}>Add Image</Text>
+                </View>
+                
+                <BottomSheet
+                renderContent={renderInner}
+                renderHeader={renderHeader}
+                borderRadius={20}
+                
+    
+        ref={sheetRef}
+                snapPoints={[330,0]}
+                initialSnap={1}
+                enabledGestureInteraction={true}
+                />
                 <TouchableOpacity onPress={()=> navigation.navigate("HomeCleanProvider")}>
                  <View style={styles.Button}>
                      <Text style={styles.btntext}>Find Provider</Text>
@@ -147,6 +243,7 @@ const styles = StyleSheet.create({
         color:'#4d4d4d',
         fontSize:20,
         marginLeft: wp('1'),
+        marginTop:hp('5%')
 
     },
     input:{
@@ -160,12 +257,32 @@ const styles = StyleSheet.create({
 
 
     },
+    Header: {
+        backgroundColor: '#FFFFFF',
+        shadowColor: '#333333',
+        shadowRadius: 2,
+        shadowOpacity: 0.4,
+        // elevation: 5,
+        paddingTop: 20,
+        borderTopLeftRadius: 20,
+        borderTopRightRadius: 20,
+      },
+      panelheader: {
+        alignItems: 'center',
+      },
+      panelhandle: {
+        width: 40,
+        height: 8,
+        borderRadius: 4,
+        backgroundColor: '#00000040',
+        marginBottom: 8,
+      },
     Button:{
         width: wp('80%'),
         height: hp('8%'),
 
         borderRadius:15,
-        marginTop: hp('10'),
+        marginTop: hp('5%'),
         borderRadius:20,
         borderWidth:2,
         backgroundColor:'#69c4ff',
@@ -189,5 +306,33 @@ const styles = StyleSheet.create({
 
 
     },
+    panel: {
+        padding: 20,
+        backgroundColor: '#FFFFFF',
+        paddingTop: 20,
+        marginTop:hp('-2%')
+    },
+    panelTitle: {
+        fontSize: 27,
+        height: 35,
+      },
+      panelSubtitle: {
+        fontSize: 14,
+        color: 'gray',
+        height: 30,
+        marginBottom: 10,
+      },
+      panelButton: {
+        padding: 13,
+        borderRadius: 10,
+        backgroundColor: '#00BFFF',
+        alignItems: 'center',
+        marginVertical: 7,
+      },
+      panelButtonTitle: {
+        fontSize: 17,
+        fontWeight: 'bold',
+        color: 'white',
+      }
 
 });

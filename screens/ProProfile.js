@@ -30,12 +30,13 @@ const ProProfile = ({navigation}) => {
 
     return (
         <SafeAreaView style={styles.container}>
-        <View>
+        <View style={styles.header}>
             
                           <Text style={{fontSize:30,textAlign:'center',color:'black',fontWeight:'700',marginTop:hp('5%')}}>My Profile</Text>
 
                  </View>
-                 <View style={{height:hp('82%')}}>
+                 <View style={styles.footer}>
+                 <View style={{height:hp('75%')}}>
                <ScrollView >
                     <View style={{marginTop:hp('5%')}}>
                        
@@ -55,14 +56,17 @@ const ProProfile = ({navigation}) => {
     <View>
     <Text style={{marginLeft:wp('2%'),marginTop:hp('4%')}}>Charges</Text>
     <Text style={{fontSize:20,marginLeft:wp('5%'),color:'black',fontWeight:'500',marginTop:hp('2%')}}>Enter Cost</Text>
-    <TextInput style={{textAlign:'center',borderColor:'black',borderWidth:1,borderRadius:10,width:wp('30%'),marginLeft:wp('15%'),marginTop:hp('2%')}} placeholder="Enter your Cost"/>
+    <TextInput style={{fontSize:15,textAlign:'center',borderColor:'black',borderWidth:1,borderRadius:10,width:wp('30%'),marginLeft:wp('15%'),marginTop:hp('2%')}} placeholder="Enter your Cost"/>
     </View>
+    <View style={{justifyContent:'center',alignContent:'center',alignItems:'center'}}>
     <View style={styles.btn}>
                   <Button  title="Save info" onPress={()=> navigation.navigate("BookingProvider")} />
+              </View>
               </View>
                     
             </ScrollView>  
             </View> 
+            </View>
        
       
 
@@ -95,14 +99,15 @@ const styles = StyleSheet.create({
         justifyContent:'center',
         alignItems:'center',
         paddingBottom:50,
-        backgroundColor:'#ebf3f9'
+        backgroundColor:'white'
     },
     footer:{
-        flex: 4,
-        backgroundColor: '#ebf3f9',
+        flex: 6,
+        backgroundColor: '#f8f9fd',
         borderTopLeftRadius:30,
         borderTopRightRadius:30,
         alignItems:'center',
+        marginTop:hp('-5%')
     },
     texta:{
         fontSize:20,
@@ -115,7 +120,7 @@ const styles = StyleSheet.create({
     },
     container: {
 
-        backgroundColor: '#ebf3f9',
+        backgroundColor: 'white',
         height: hp('100%'),
         width: wp('100%')
 
@@ -138,28 +143,11 @@ const styles = StyleSheet.create({
         borderColor:'#2196f3',
         marginTop:hp('6%'),
         overflow:"hidden",
-        marginLeft:wp('18%')
        
 
 
       },
-    header: {
-        flex: 1,
-        justifyContent:'center',
-        alignItems:'center',
-       backgroundColor:'#ebf3f9',
-        paddingBottom:50
-    },
-    footer: {
-        flex: 5,
-        backgroundColor: '#fff',
-        borderTopLeftRadius:30,
-        borderTopRightRadius:30,
-
-
-
-       
-    },
+   
 
 
 

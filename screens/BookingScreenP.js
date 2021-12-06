@@ -7,6 +7,7 @@ import CancelledPro from '../components/CancelledPro'
 import UpcomingPro from '../components/UpcomingPro';
 import NewBooking from '../components/NewBooking';
 import CompletedPro from '../components/CompletedPro';
+import { color } from 'react-native-reanimated';
 
 const BookingScreenP = ({navigation}) => { 
   const Tab = createMaterialTopTabNavigator();
@@ -31,7 +32,7 @@ const BookingScreenP = ({navigation}) => {
         activeTintColor: 'blue',
         pressColor:'white',
         inactiveTintColor:'black',
-        labelStyle: { fontSize: 12,fontWeight:'700' },
+        labelStyle: { fontSize: 12,fontWeight:'700'},
         style: { backgroundColor: 'white' },
       }}>
          <Tab.Screen name="New" component={NewBooking} />
@@ -56,7 +57,9 @@ const styles = StyleSheet.create({
   textheader:{
     fontSize:25,
     textAlign:'center',
-    marginTop:hp('2%')
+    marginTop:hp('2%'),
+    fontWeight:'700',
+    color:'black'
    
   },
   imgmenu:{

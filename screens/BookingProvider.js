@@ -2,6 +2,7 @@ import React from 'react';
 import { StyleSheet, View, Text, Button,FlatList,SafeAreaView, ScrollView, TouchableOpacity, Image, TextInput } from 'react-native';
 import { widthPercentageToDP as wp, heightPercentageToDP as hp } from 'react-native-responsive-screen';
 import { DatenTime } from '../components/DatenTime';
+import AntDesign from 'react-native-vector-icons/dist/AntDesign';
 const DATA = [
 
     {
@@ -36,14 +37,23 @@ const BookingProvider = ({navigation}) => {
         <SafeAreaView style={styles.container}>
             
         <View style={styles.header}>
+        <View>
+            <AntDesign
+                     onPress={()=> navigation.navigate("ProviderProfile")}   style={{marginTop: hp('4%'), marginLeft: wp('-44%') }} name={"arrowleft"} size={35} color="black" />
+                 </View>
+         
        
 
        
-        <Image style={styles.bg} source={require('../assets/icons/download22.png')} />  
        
-    
+       <View style={{    marginTop: hp('-12%'),
+}}>
         <Image style={styles.img} source={require('../assets/icons/download23.png')} />    
-        
+        </View>
+        <View style={{marginTop:hp('-14%'),marginLeft:wp('-50%')}}>
+          <Text style={{fontSize:20,color:'black',fontWeight:'700'}}>John Kk</Text>
+          <Text style={{fontSize:16,color:'black',marginTop:hp('5%')}}>Rate: $12/hr</Text>
+          </View>
 
 
             </View>
@@ -55,7 +65,8 @@ const BookingProvider = ({navigation}) => {
         style={{
           backgroundColor: 'white',
           padding: 16,
-          height:hp('40%'),
+          height:hp('60%'),
+          marginTop:hp('-2%')
         }}
       >
       
@@ -69,10 +80,10 @@ const BookingProvider = ({navigation}) => {
                     
                     <Text style={styles.name}>{item.title}</Text>
                     <Text style={styles.date}>{item.date}</Text>
-                    <Text style={styles.address}>{item.name}</Text>
+                    <Text style={styles.address}>Address</Text>
 
                     <Text style={styles.adress}>{item.adress}</Text>
-                    <Text style={styles.descr}>{item.name2}</Text>
+                    <Text style={styles.descr}>Description</Text>
 
 
 
@@ -106,14 +117,15 @@ const BookingProvider = ({navigation}) => {
      
         
     
-
-    </View>
+<View style={{marginTop:hp('-2%')}}>
     <DatenTime/>
+    </View>
      <View style={styles.btn}>
     
     <Button title="Confirm Booking" onPress={()=> navigation.navigate("BookingConfirm")}/>
     </View>
     
+    </View>
            </SafeAreaView>
            
     )}
@@ -143,6 +155,7 @@ const styles = StyleSheet.create({
         borderTopLeftRadius:30,
         borderTopRightRadius:30,
         alignItems:'center',
+        marginTop:hp('4%')
     
     },
     texta:{
@@ -163,7 +176,7 @@ const styles = StyleSheet.create({
 
       },
       main:{
-        height: hp('20%'),
+        height: hp('40%'),
         width: wp('90%'),
       
         backgroundColor:'white',
@@ -190,14 +203,23 @@ const styles = StyleSheet.create({
     },
     adress:{
       fontSize:15,
-      marginLeft:wp('10%')
+      marginLeft:wp('10%'),
+      padding:5
+    },
+    category:{
+      fontSize:15,
+      marginLeft:wp('10%'),
+      padding:5,
+
     },
     address:{
-      color:'#a8aeb2'
+      color:'#a8aeb2',
+      fontSize:16
 
     },
     descr:{
-      color:'#a8aeb2'
+      color:'#a8aeb2',
+      fontSize:16
 
 
     },
@@ -205,10 +227,9 @@ const styles = StyleSheet.create({
             width: wp('60%'),
             marginTop:hp('15%'),
             borderRadius:20,
-            borderWidth:10,
+            borderWidth:8,
             borderColor:'#1E90FF',
-            position:'absolute',
-            marginTop:hp('80%'),position:'absolute',marginLeft:wp('20%')
+            marginTop:hp('-20%'),marginLeft:wp('8%')
 
         },
 
@@ -228,9 +249,9 @@ const styles = StyleSheet.create({
          
     },
     img:{
-         height: hp('20%'),
+         height: hp('18%'),
     width: wp('20%'),
-    marginTop: hp('-20%'),
+    marginTop: hp('12%'),
     marginLeft:wp('30%')
 
         

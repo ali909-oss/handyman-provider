@@ -20,8 +20,8 @@ const Stack = createStackNavigator();
 const App = () => {
     return (
         <NavigationContainer  >
+            <ProviderStack/>
            
-<ProviderStack/>
         </NavigationContainer>
         
           

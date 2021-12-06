@@ -3,10 +3,6 @@ import { width ,isLargeScreen, View,style,StyleSheet,Button, Text} from 'react-n
 import { NavigationContainer } from '@react-navigation/native';
 import {createDrawerNavigator} from '@react-navigation/drawer';
 import TabsProvider from './ProviderTabs';
-import Profile from '../screens/Profile';
-import Wallet from '../screens/Wallet';
-import ManageAddress from '../screens/ManageAddres';
-import Support from '../screens/Support';
 import AboutUs from '../screens/AboutUs';
 import PrivacyPolicy from '../screens/PrivacyPolicy';
 import Questions from '../screens/Faqs';
@@ -21,6 +17,12 @@ import ProProfile from '../screens/ProProfile';
 import RatingsPro from '../screens/RatingsPro';
 import ServicesPro from '../screens/ServicesPro'
 import CustomDrawerPro from '../components/CustomDrawerPro';
+import WalletPro from '../screens/MyWalletPro';
+import SupportPro from '../screens/SupportPro';
+import AboutUsPro from '../screens/AboutUsPro';
+import PrivacyPolicyPro from '../screens/PrivacyPolicyPro';
+import checkboxxx from '../screens/Checkboxxx';
+import happy from '../screens/Checkboxxx';
 const Drawer = createDrawerNavigator();
 
 const ProviderStack = () => {
@@ -86,7 +88,7 @@ const ProviderStack = () => {
         />
         <Drawer.Screen
         name = "My Wallet"
-        component={Wallet}
+        component={WalletPro}
         options={{
           drawerIcon: ({focused, size}) => (
              <AntDesign
@@ -100,7 +102,7 @@ const ProviderStack = () => {
        
         <Drawer.Screen
         name = "Support"
-        component={Support}
+        component={SupportPro}
         options={{
           drawerIcon: ({focused, size}) => (
              <MaterialIcons
@@ -113,7 +115,7 @@ const ProviderStack = () => {
         />
          <Drawer.Screen
         name = "AboutUs"
-        component={AboutUs}
+        component={AboutUsPro}
         options={{
           drawerIcon: ({focused, size}) => (
              <Ionicons
@@ -126,7 +128,7 @@ const ProviderStack = () => {
         />
          <Drawer.Screen
         name = "PrivacyPolicy"
-        component={PrivacyPolicy}
+        component={PrivacyPolicyPro}
         options={{
           drawerIcon: ({focused, size}) => (
              <MaterialIcons
@@ -151,7 +153,7 @@ const ProviderStack = () => {
        }}
       
         />
-       
+        
       
        
         

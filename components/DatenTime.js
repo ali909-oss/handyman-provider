@@ -18,7 +18,7 @@ export const DatenTime = () => {
     setDate(currentDate);
 
     let tempDate =  new Date(currentDate);
-    let fDate = tempDate.getDate() + '/' + (tempDate.getMonth() + 1) + '/' + tempDate.getFullYear();
+    let fDate = 'Date: '  + tempDate.getDate() + '/' + (tempDate.getMonth() + 1) + '/' + tempDate.getFullYear();
     let fTime = 'Hours: ' + tempDate.getHours() + ' | Minutes: ' + tempDate.getMinutes(); 
     setText(fDate + '\n' + fTime)
 
@@ -39,7 +39,7 @@ export const DatenTime = () => {
   };
     
   return (
-    <View > 
+    <View style={{marginTop:hp('15%')}}> 
       <View>
         <Text style={{fontWeight:'500',fontSize:20,marginTop:heightPercentageToDP('-30%'),justifyContent:'center',alignItems:'center',textAlign:'center',color:'green'}}>{text}</Text>
         </View>

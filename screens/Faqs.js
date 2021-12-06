@@ -116,7 +116,7 @@ const Questions = ({navigation}) => {
         style={[styles.content, isActive ? styles.active : styles.inactive]}
         transition="backgroundColor">
         <Text
-          style={{ textAlign:'left'}}>
+          style={{ textAlign:'left',fontSize:18}}>
           {section.content}
           
         </Text>
@@ -235,6 +235,7 @@ footer: {
     borderTopLeftRadius: 30,
     borderTopRightRadius: 30,
     alignItems:'center',
+    marginTop:hp('-10%')
     
 
     
@@ -244,10 +245,9 @@ footer: {
 
 },
 texta:{
-    fontSize:25,
-    fontWeight:'500',
+    fontSize:30,
+    fontWeight:'700',
     color:'blue',
-       marginRight: wp('50%'),
 
        
    
@@ -257,7 +257,6 @@ texta:{
    textb:{
     fontSize:15,
     color:'#505050',
-    marginRight: wp('50%'),
 
    
 
