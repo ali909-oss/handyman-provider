@@ -17,22 +17,22 @@ const DATA = [
      },
     {
         id:'3',
-        name: 'Movers',
+        name: 'Electrician',
         image: require("../assets/icons/Vector2.png"),
      },
     {
          id: '4',
-        name: 'Painter',
+        name: 'Driver ',
         image: require("../assets/icons/Vector4.png"),
 },
     {
         id:'5',
-        name: 'Carpenter',
+        name: 'Cable man',
         image: require("../assets/icons/Vector5.png"),
  },
     {
         id:'6',
-        name: 'Gardening',
+        name: 'Plumber',
         image: require("../assets/icons/Vector6.png"),
 },
     {
@@ -43,14 +43,154 @@ const DATA = [
     
     {
         id:'8',
-        name: 'Beauty',
+        name: 'Tailor',
         image: require("../assets/icons/Vector1.png"),
  },
     {
         id:'9',
-        name: 'Sanitize',
+        name: 'Carpenter',
         image: require("../assets/icons/Vector9.png"),
 },
+{
+    name: 'Painter',
+      id: '10',
+    image: require("../assets/icons/Vector8.png"),
+     },
+{
+    id:'11',
+    name: 'Plumber',
+    image: require("../assets/icons/Vector3.png"),
+ },
+{
+    id:'12',
+    name: 'Nanny ',
+    image: require("../assets/icons/Vector2.png"),
+ },
+{
+     id: '13',
+    name: 'Teacher',
+    image: require("../assets/icons/Vector4.png"),
+},
+{
+    id:'14',
+    name: 'Estate Agent',
+    image: require("../assets/icons/Vector5.png"),
+},
+{
+    id:'15',
+    name: 'Laborer',
+    image: require("../assets/icons/Vector6.png"),
+},
+{
+    name: 'Photographer',
+   id: '16',
+    image: require("../assets/icons/Vector7.png"),
+},
+
+{
+    id:'17',
+    name: 'Videographer',
+    image: require("../assets/icons/Vector1.png"),
+},
+{
+    id:'18',
+    name: 'Taxi driver',
+    image: require("../assets/icons/Vector9.png"),
+},
+{
+    name: 'Hairdresser',
+      id: '19',
+    image: require("../assets/icons/Vector8.png"),
+     },
+{
+    id:'20',
+    name: 'Barber',
+    image: require("../assets/icons/Vector3.png"),
+ },
+{
+    id:'21',
+    name: 'Catering',
+    image: require("../assets/icons/Vector2.png"),
+ },
+{
+     id: '22',
+    name: 'Web designer ',
+    image: require("../assets/icons/Vector4.png"),
+},
+{
+    id:'23',
+    name: 'Decorator',
+    image: require("../assets/icons/Vector5.png"),
+},
+{
+    id:'24',
+    name: 'Event planner ',
+    image: require("../assets/icons/Vector6.png"),
+},
+{
+    name: 'Pest control',
+   id: '25',
+    image: require("../assets/icons/Vector7.png"),
+},
+
+{
+    id:'26',
+    name: 'Dry cleaner',
+    image: require("../assets/icons/Vector1.png"),
+},
+{
+    id: '31',
+   name: 'plaster or brick layer',
+   image: require("../assets/icons/Vector4.png"),
+   },
+{
+    id:'27',
+    name: 'Vehicle hire',
+    image: require("../assets/icons/Vector9.png"),
+},
+{
+    id:'32',
+    name: 'Roofing and guttering',
+    image: require("../assets/icons/Vector5.png"),
+    },
+{
+name: 'Vehicle washer',
+  id: '28',
+image: require("../assets/icons/Vector8.png"),
+ },
+{
+id:'29',
+name: 'Canopies',
+image: require("../assets/icons/Vector3.png"),
+},
+{
+id:'30',
+name: 'Canopies decoration',
+image: require("../assets/icons/Vector2.png"),
+},
+
+
+{
+id:'33',
+name: 'Rubbish clearance',
+image: require("../assets/icons/Vector6.png"),
+},
+{
+name: 'Tiling Service',
+id: '34',
+image: require("../assets/icons/Vector7.png"),
+},
+
+{
+id:'35',
+name: 'Welding service',
+image: require("../assets/icons/Vector1.png"),
+},
+{
+    id:'36',
+    name: 'chair  hire',
+    image: require("../assets/icons/Vector6.png"),
+    },
     
 
 

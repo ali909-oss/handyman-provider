@@ -23,6 +23,7 @@ import AboutUsPro from '../screens/AboutUsPro';
 import PrivacyPolicyPro from '../screens/PrivacyPolicyPro';
 import checkboxxx from '../screens/Checkboxxx';
 import happy from '../screens/Checkboxxx';
+import PortfolioPro from '../screens/PortfolioPro';
 const Drawer = createDrawerNavigator();
 
 const ProviderStack = () => {
@@ -72,6 +73,20 @@ const ProviderStack = () => {
        
       
         />
+         <Drawer.Screen
+        name = "My Portfolio"
+        component={PortfolioPro}
+        options={{
+       
+        drawerIcon: ({focused, size}) => (
+         <Entypo
+            name="star"
+            size={size}
+            color={focused ? '#7cc' : '#ccc'}
+         />
+      ),
+   }}
+        />
         <Drawer.Screen
         name = "My Reviews"
         component={RatingsPro}
@@ -86,19 +101,7 @@ const ProviderStack = () => {
       ),
    }}
         />
-        <Drawer.Screen
-        name = "My Wallet"
-        component={WalletPro}
-        options={{
-          drawerIcon: ({focused, size}) => (
-             <AntDesign
-                name="wallet"
-                size={size}
-                color={focused ? '#7cc' : '#ccc'}
-             />
-          ),
-       }}
-        />
+        
        
         <Drawer.Screen
         name = "Support"

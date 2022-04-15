@@ -4,6 +4,9 @@ import { DrawerContentScrollView, DrawerItemList  } from "@react-navigation/draw
 import { widthPercentageToDP as wp, heightPercentageToDP as hp } from 'react-native-responsive-screen';
 import FontAwesome from 'react-native-vector-icons/dist/FontAwesome';
 
+const Data=[{
+    username:'John Wick'
+}]
 const CustomDrawer =(props,navigation) => {
     return(
         <View style={{flex:1}}>
@@ -12,8 +15,7 @@ const CustomDrawer =(props,navigation) => {
          contentContainerStyle={{backgroundColor:'white',padding:20}}>
          <Image style={styles.imagehead} source={require('../assets/icons/img1.png')} />
          <View style={{flexDirection:'column',marginLeft:wp('25%'),marginTop:hp('-6%')}}>
-         <Text style={styles.texta}>Ali Hafeez</Text>
-         <Text style={styles.texta}>@ali909</Text>
+         <Text style={styles.texta}>{Data && Data[0].username}</Text>
 
          </View>
         

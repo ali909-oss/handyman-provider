@@ -12,10 +12,10 @@ const DATA = [
 
     {
         title: 'Carpet Shampooing',
-        price: '$250 onwards',
+        price: '₦250 onwards',
         id: '1',
         image1: require("../assets/icons/user.jpg"),
-        CheckBox:'first'
+        setToggleCheckBox:'1'
 
 
 
@@ -24,10 +24,10 @@ const DATA = [
     },
     {
         title: 'Bath Cleaning',
-        price: '$250 onwards',
+        price: '₦250 onwards',
         id: '2',
         image1: require("../assets/icons/user.jpg"),
-        CheckBox:'second'
+        setToggleCheckBox:'2'
 
 
 
@@ -37,10 +37,10 @@ const DATA = [
     },
     {
         title: 'Full Home Deep Cleaning',
-        price: '$250 onwards',
+        price: '₦250 onwards',
         id: '3',
         image1: require("../assets/icons/user.jpg"),
-        CheckBox:'Third'
+        CheckBox:'3'
 
 
 
@@ -50,10 +50,10 @@ const DATA = [
     },
     {
         title: 'Sofa Shampooing',
-        price: '$250 onwards',
+        price: '₦250 onwards',
         id: '4',
         image1: require("../assets/icons/user.jpg"),
-        CheckBox:'Fourth'
+        CheckBox:'4'
 
 
 
@@ -63,10 +63,10 @@ const DATA = [
     },
     {
         title: 'Toilet Cleaning',
-        price: '$250 onwards',
+        price: '₦250 onwards',
         id: '5',
         image1: require("../assets/icons/user.jpg"),
-        CheckBox:'Fifth'
+        CheckBox:'5'
 
 
 
@@ -76,10 +76,10 @@ const DATA = [
     },
     {
         title: 'Floor Polising',
-        price: '$250 onwards',
+        price: '₦250 onwards',
         id: '6',
         image1: require("../assets/icons/user.jpg"),
-        CheckBox:'Sixth'
+        CheckBox:'6'
 
 
 
@@ -89,10 +89,10 @@ const DATA = [
     },
     {
         title: 'Home Cleaning',
-        price: '$250 onwards',
+        price: '₦250 onwards',
         id: '7',
         image1: require("../assets/icons/user.jpg"),
-        CheckBox:'Seventh'
+        CheckBox:'7'
 
 
 
@@ -107,13 +107,7 @@ const SPACING = 5;
 
 
 const ProviderSelection = ({ navigation }) => {
-    const [first, setfirst] = useState(false)
-    const [second, setfirst] = useState(false)
-    const [Third, setfirst] = useState(false)
-    const [Fourth, setfirst] = useState(false)
-    const [Fifth, setfirst] = useState(false)
-    const [Sixth, setfirst] = useState(false)
-    const [Seventh, setfirst] = useState(false)
+    const [toggleCheckBox, setToggleCheckBox] = useState(false)
 
    
     
@@ -182,7 +176,7 @@ const ProviderSelection = ({ navigation }) => {
                                     </View>
                                     <CheckBox  style={styles.checkbox}
                     disabled={false}
-                    value={item.CheckBox}
+                    value={toggleCheckBox}
                     onValueChange={(value) => setToggleCheckBox(value)}></CheckBox>
                     
                 
@@ -271,7 +265,7 @@ const styles = StyleSheet.create({
         fontSize: 23,
         fontWeight: '500',
         color: 'black',
-        marginTop: hp('-12%'),
+        marginTop: hp('-16%'),
         marginRight: wp('50'),
         fontFamily: 'Poppins'
     },

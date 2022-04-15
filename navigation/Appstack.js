@@ -68,19 +68,7 @@ const Appstack = () => {
        
       
         />
-        <Drawer.Screen
-        name = "My Wallet"
-        component={Wallet}
-        options={{
-          drawerIcon: ({focused, size}) => (
-             <AntDesign
-                name="wallet"
-                size={size}
-                color={focused ? '#7cc' : '#ccc'}
-             />
-          ),
-       }}
-        />
+        
         <Drawer.Screen
         name = "ManageAddress"
         component={ManageAddress}
@@ -148,10 +136,7 @@ const Appstack = () => {
        }}
       
         />
-        <Drawer.Screen
-        name = "Provider"
-        component={ProProfile}
-/>
+        
       
        
         

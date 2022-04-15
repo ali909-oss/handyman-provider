@@ -39,7 +39,7 @@ export default BookingInformation;
 const styles = StyleSheet.create({
     container: {
 
-        backgroundColor: '#ebf3f9',
+        backgroundColor: '#f8f9fd',
         height: hp('100%'),
         width: wp('100%')
 

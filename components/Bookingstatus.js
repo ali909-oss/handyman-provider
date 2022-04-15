@@ -6,6 +6,8 @@ import BottomSheet from 'reanimated-bottom-sheet';
 import Feather from 'react-native-vector-icons/dist/Feather';
 import Entypo from 'react-native-vector-icons/dist/Entypo';
 import { set } from 'react-native-reanimated';
+import { useNavigation } from '@react-navigation/native';
+
 const DATA = [
 
     {
@@ -65,18 +67,19 @@ const DATA = [
 const SPACING=3;
 
 const Bookingstatus = () => {
- 
+    const navigation = useNavigation();
+
     const [isTrue ,setisTrue]= useState(true)
     const sheetRef = React.useRef(null);
     const sheetRef1 = React.useRef(null);
     const sheetRef2 = React.useRef(null);
     const [no , setNo] = useState(0)
 
-
+         
 
   return (
       <View style={styles.container}>
-      <View style={{height:hp('60%'),marginTop:hp('1%')}}>
+      <View style={{height:hp('68%'),marginTop:hp('1%')}}>
            
           {no == 0 ? <TouchableOpacity onPress={() => {sheetRef.current.snapTo(0)
            
@@ -244,7 +247,7 @@ const Bookingstatus = () => {
 
  
   <BottomSheet
-        snapPoints={[300, 20]}
+        snapPoints={[300, 0]}
         borderRadius={20}
     
         ref={sheetRef}
@@ -253,13 +256,12 @@ const Bookingstatus = () => {
           
             return(
             <View style={{
-                backgroundColor: '#f8f9fd',
                 padding: 10,
-                height: hp('40%'),
+                backgroundColor: '#f8f9fd',
+                paddingTop: 20,
+                marginTop:hp('-2%'),
                 width:wp('90%'),
-                marginTop: hp('20%'),
-                borderRadius:10
-                
+                borderRadius:20
               }}>
                   
            
@@ -270,13 +272,13 @@ const Bookingstatus = () => {
 
     
 <View style={styles.btn}>
-<Button title="Amount to Pay    $15/hr" onPress={()=> setNo(1)}/>
+<Button title="Amount to Pay    ₦15/hr" onPress={()=> setNo(1)}/>
 </View>
 </View>
 : <View></View>}
 {no == 1 ? <View style={{ flexDirection: "row", justifyContent: "space-around" }}>
 <View style={styles.btn}>
-<Button title="Start the Job " onPress={()=> setNo(2)}/>
+<Button title="Amount to Pay    ₦15/hr" onPress={()=> navigation.navigate("PaymentDone")}/>
 </View>
 </View>:<View></View>}
 </View>
@@ -343,6 +345,10 @@ const Bookingstatus = () => {
   export default Bookingstatus ;
 
 const styles = StyleSheet.create({
+    container:{
+     width:wp('100%'),
+     height:hp('100%')
+    },
   
       
           
@@ -371,6 +377,7 @@ const styles = StyleSheet.create({
 
 
     },
+    
     category:{
      color:'#a8aeb2',padding:5,marginLeft:wp('4%')
     },

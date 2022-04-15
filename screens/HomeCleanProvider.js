@@ -18,7 +18,7 @@ const DATA = [
         price:'Price',
         rating:'Rating',
         tjobs:'183',
-        tprice:'$12/hr',
+        tprice:'₦12/hr',
         trating:'4.5',
         image: require("../assets/icons/Layer2.png"),
 
@@ -35,7 +35,7 @@ const DATA = [
         price:'Price',
         rating:'Rating',
         tjobs:'183',
-        tprice:'$12/hr',
+        tprice:'₦12/hr',
         trating:'4.5',
         image: require("../assets/icons/Layer3.png"),
 
@@ -51,7 +51,7 @@ const DATA = [
         price:'Price',
         rating:'Rating',
         tjobs:'183',
-        tprice:'$12/hr',
+        tprice:'₦12/hr',
         trating:'4.5',
         image: require("../assets/icons/Layer4.png"),
 
@@ -68,7 +68,7 @@ const DATA = [
         price:'Price',
         rating:'Rating',
         tjobs:'183',
-        tprice:'$12/hr',
+        tprice:'₦12/hr',
         trating:'4.5',
         image: require("../assets/icons/Layer2.png"),
 
@@ -84,7 +84,7 @@ const DATA = [
         price:'Price',
         rating:'Rating',
         tjobs:'183',
-        tprice:'$12/hr',
+        tprice:'₦12/hr',
         trating:'4.5',
         image: require("../assets/icons/Layer2.png"),
 

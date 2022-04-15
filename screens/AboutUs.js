@@ -93,10 +93,9 @@ const styles = StyleSheet.create({
 
     },
     texta:{
-        fontSize:25,
-        fontWeight:'500',
+        fontSize:35,
+        fontWeight:'700',
         color:'blue',
-           marginRight: wp('50%'),
            
        
            
@@ -104,7 +103,6 @@ const styles = StyleSheet.create({
        textb:{
         fontSize:15,
         color:'#505050',
-        marginRight: wp('50%'),
 
        
 
@@ -145,6 +143,7 @@ const styles = StyleSheet.create({
         borderTopLeftRadius: 30,
         borderTopRightRadius: 30,
         alignItems:'center',
+        marginTop:hp('5%')
 
         
 

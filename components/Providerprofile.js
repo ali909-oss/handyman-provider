@@ -15,7 +15,7 @@ const DATA = [
         price:'Price',
         rating:'Rating',
         tjobs:'183',
-        tprice:'$12/hr',
+        tprice:'₦12/hr',
         trating:'4.5',
 
         

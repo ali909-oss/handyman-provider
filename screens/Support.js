@@ -27,15 +27,15 @@ const Support = ({ navigation }) => {
         <View style={styles.container}>
 
             <View style={styles.header}>
-            <View style={{marginTop: hp('6%'), marginLeft: wp('-4%') }}>
+            <View style={{marginTop: hp('2%'), marginLeft: wp('-4%') }}>
             <AntDesign
-                     onPress={()=> navigation.navigate("HomeScreen")}   style={{marginTop: hp('-3%'), marginLeft: wp('-44%') }} name={"arrowleft"} size={35} color="black" />
+                     onPress={()=> navigation.navigate("HomeScreen")}   style={{ marginLeft: wp('-44%') }} name={"arrowleft"} size={35} color="black" />
                  </View>
 
 
                 <Image style={styles.img1} source={require('../assets/icons/Vector13.png')} />
 
-                <View style={{ marginTop: hp('-2%') }}>
+                <View style={{ marginTop: hp('3%') }}>
                     <Text style={styles.texta}>Support</Text>
                 </View>
                 <Text style={styles.textb}>Connect Us</Text>
@@ -72,7 +72,7 @@ const Support = ({ navigation }) => {
                 </View>
                 <View style={{marginLeft:widthPercentageToDP('5%'),marginTop:hp('2%')}}>
                <Text style={{color:'blue',fontWeight:'700',fontSize:25}}>Write Us</Text>
-               <Text>Let us know the Problem</Text>
+               <Text style={{fontSize:16,padding:5}}>Let us know the Problem</Text>
                </View>
 <View style={{marginTop:hp('1%')}}>
 <UselessTextInputMultiline/> 
@@ -123,8 +123,7 @@ const styles = StyleSheet.create({
         fontSize:25,
         fontWeight:'500',
         color:'blue',
-        marginTop: hp('-40%'),
-           marginRight: wp('50%'),
+        marginTop: hp('-45%'),
            
        
            
@@ -132,8 +131,7 @@ const styles = StyleSheet.create({
        textb:{
         fontSize:15,
         color:'#505050',
-        marginTop: hp('-35%'),
-        marginRight: wp('50%'),
+        marginTop: hp('-40%'),
 
        
 

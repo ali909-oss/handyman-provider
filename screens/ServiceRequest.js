@@ -119,9 +119,7 @@ const SeriveRequest = ({navigation}) => {
             />
                 </View>
                 <View style={{marginLeft:wp('-70%'),marginTop:hp('3%')}}>
-                    <TouchableOpacity onPress={() => {sheetRef.current.snapTo(0)
-           
-        }}>
+                    <TouchableOpacity onPress={() => {sheetRef.current.snapTo(0)}}>
                 <FontAwesome 
                 name="image"
                 size={70}
@@ -333,6 +331,8 @@ const styles = StyleSheet.create({
         fontSize: 17,
         fontWeight: 'bold',
         color: 'white',
-      }
+      },
+      
+     
 
 });

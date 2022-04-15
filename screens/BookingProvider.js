@@ -52,7 +52,7 @@ const BookingProvider = ({navigation}) => {
         </View>
         <View style={{marginTop:hp('-14%'),marginLeft:wp('-50%')}}>
           <Text style={{fontSize:20,color:'black',fontWeight:'700'}}>John Kk</Text>
-          <Text style={{fontSize:16,color:'black',marginTop:hp('5%')}}>Rate: $12/hr</Text>
+          <Text style={{fontSize:16,color:'black',marginTop:hp('5%')}}>Rate: ₦12/hr</Text>
           </View>
 
 

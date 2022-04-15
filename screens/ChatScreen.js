@@ -157,7 +157,7 @@ const styles = StyleSheet.create({
         marginTop: hp('3'),
         width: wp('90%'),
         padding:SPACING,
-        marginBottom:SPACING,
+        marginBottom:-3,
         backgroundColor:'white',
         borderRadius:19
     },
@@ -180,8 +180,8 @@ const styles = StyleSheet.create({
      color:'#a8aeb2'
     },
     image:{
-        height: hp('15%'),
-       width: wp('20%'),
+        height: hp('12%'),
+       width: wp('15%'),
        marginTop: hp('-10%'),
        marginLeft: wp('65%'),
     

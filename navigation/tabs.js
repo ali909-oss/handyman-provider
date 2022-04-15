@@ -21,6 +21,16 @@ const Tabs = () => {
     return (
         <Tab.Navigator
             tabBarOptions={{showLabel: false ,
+              style: {
+                height: 60,
+                width: 400,
+                flexDirection: 'column',
+                alignSelf: 'center',
+                elevation: 3,
+                borderTopStartRadius: 5,
+                borderTopEndRadius: 5,
+
+            },
                 
             }}
         >
@@ -41,7 +51,7 @@ const Tabs = () => {
                 color={focused ? '#7cc' : '#ccc'}
                 
              />
-             <Text style = {{color:focused?"#1a71ff":"##85899f",fontSize:15,marginBottom:5}}>Home</Text>
+             <Text style = {{color:focused?"#1a71ff":"##85899f",fontSize:15,marginBottom:5,padding:2}}>Home</Text>
                         </View>
                        
                         
@@ -69,7 +79,7 @@ const Tabs = () => {
                  color={focused ? '#7cc' : '#ccc'}
                  
               />
-              <Text style = {{color:focused?"#1a71ff":"##85899f",fontSize:15,marginBottom:5}}>Bookings</Text>
+              <Text style = {{color:focused?"#1a71ff":"##85899f",fontSize:15,marginBottom:5,padding:2}}>Bookings</Text>
                          </View>
                         
                          
@@ -93,7 +103,7 @@ const Tabs = () => {
                  color={focused ? '#7cc' : '#ccc'}
                  
               />
-              <Text style = {{color:focused?"#1a71ff":"##85899f",fontSize:15,marginBottom:5}}>Chat</Text>
+              <Text style = {{color:focused?"#1a71ff":"##85899f",fontSize:15,marginBottom:5,padding:2}}>Chat</Text>
                          </View>
                         
                          

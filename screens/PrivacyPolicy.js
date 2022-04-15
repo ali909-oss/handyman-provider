@@ -38,7 +38,7 @@ const PrivacyPolicy = ({ navigation }) => {
                 
 
             <Text style={styles.textaa}>Term of use</Text>
-            <View style={{marginTop:hp('2%'),height:hp('40%')}}>
+            <View style={{marginTop:hp('2%'),height:hp('50%')}}>
                     <FlatList
                     data={Data}
             keyExtractor={item => item.id}
@@ -97,18 +97,17 @@ const styles = StyleSheet.create({
 
     },
     texta:{
-        fontSize:25,
-        fontWeight:'500',
+        fontSize:35,
+        fontWeight:'700',
         color:'blue',
-           marginRight: wp('50%'),
 
            
        
            
        },
        textaa:{
-        fontSize:20,
-        fontWeight:'500',
+        fontSize:25,
+        fontWeight:'700',
         color:'blue',
            marginLeft: wp('2%'),
 
@@ -117,8 +116,8 @@ const styles = StyleSheet.create({
            
        },
        textp:{
-        fontSize:20,
-        fontWeight:'500',
+        fontSize:25,
+        fontWeight:'700',
         color:'blue',
            marginLeft: wp('2%'),
            marginTop:hp('5%')
@@ -130,7 +129,6 @@ const styles = StyleSheet.create({
        textb:{
         fontSize:15,
         color:'#505050',
-        marginRight: wp('50%'),
 
        
 

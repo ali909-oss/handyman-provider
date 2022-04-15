@@ -10,7 +10,7 @@ const DATA = [
 
     {
         title: 'Carpet Shampooing',
-        price: '$250 onwards',
+        price: '₦250 onwards',
         id: '1',
         image1: require("../assets/icons/img1.png"),
         image2: require("../assets/icons/right-arrow.png"),
@@ -22,7 +22,7 @@ const DATA = [
     },
     {
         title: 'Bath Cleaning',
-        price: '$250 onwards',
+        price: '₦250 onwards',
         id: '2',
         image1: require("../assets/icons/img1.png"),
         image2: require("../assets/icons/right-arrow.png"),
@@ -34,7 +34,7 @@ const DATA = [
     },
     {
         title: 'Full Home Deep Cleaning',
-        price: '$250 onwards',
+        price: '₦250 onwards',
         id: '3',
         image1: require("../assets/icons/img1.png"),
         image2: require("../assets/icons/right-arrow.png"),
@@ -46,7 +46,7 @@ const DATA = [
     },
     {
         title: 'Sofa Shampooing',
-        price: '$250 onwards',
+        price: '₦250 onwards',
         id: '4',
         image1: require("../assets/icons/img1.png"),
         image2: require("../assets/icons/right-arrow.png"),
@@ -58,7 +58,7 @@ const DATA = [
     },
     {
         title: 'Toilet Cleaning',
-        price: '$250 onwards',
+        price: '₦250 onwards',
         id: '5',
         image1: require("../assets/icons/img1.png"),
         image2: require("../assets/icons/right-arrow.png"),
@@ -70,7 +70,7 @@ const DATA = [
     },
     {
         title: 'Floor Polising',
-        price: '$250 onwards',
+        price: '₦250 onwards',
         id: '6',
         image1: require("../assets/icons/img1.png"),
         image2: require("../assets/icons/right-arrow.png"),
@@ -82,7 +82,7 @@ const DATA = [
     },
     {
         title: 'Home Cleaning',
-        price: '$250 onwards',
+        price: '₦250 onwards',
         id: '7',
         image1: require("../assets/icons/img1.png"),
         image2: require("../assets/icons/right-arrow.png"),
